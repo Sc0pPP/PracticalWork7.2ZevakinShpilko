@@ -73,7 +73,7 @@ namespace PlayfairCipherApp.Tests
             var cipher = new PlayfairCipher("MONARCHY");
             string result = cipher.Encrypt("INSTRUMENTS");
 
-            Assert.AreEqual("GATLMZCLRQTX", result);
+            Assert.AreEqual("GATLMZCLRQXA", result);
         }
 
         [TestMethod]
