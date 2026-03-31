@@ -55,3 +55,24 @@ U  V  W  X  Z
 - Скопировать результат
 
 ---
+## Тестовые сценарии
+
+| № | Тип | Описание | Входные данные | Ожидаемый результат | Фактический результат | Статус |
+|---|-----|----------|---------------|---------------------|-----------|--------|
+| 1 | Позитивный | Шифрование простого текста | text="HELLO", key="MONARCHY" | Непустой шифротекст ≠ "HELLO" ||  |
+| 2 | Позитивный | Обратимость encrypt→decrypt | text="TESTME", key="KEYWORD" | decrypt(encrypt("TESTME")) = "TESTME" ||  |
+| 3 | Позитивный | Повторяющиеся буквы (BALLOON) | text="BALLOON", key="KEY" | Корректная обработка LL, чётная длина ||  |
+| 4 | Позитивный | Нечётное кол-во символов | text="HELLO" (5 символов), key="KEY" | Результат чётной длины (дополнение X) ||  |
+| 5 | Позитивный | Разные ключи → разные результаты | text="TESTME", key1="ALPHA", key2="BRAVO" | result1 ≠ result2 | |  |
+| 6 | Позитивный | Известный пример MONARCHY + INSTRUMENTS | text="INSTRUMENTS", key="MONARCHY" | "GATLMZCLRQTX" | |  |
+| 7 | Позитивный | Длинный текст, roundtrip | Длинная строка, key="SECRETKEY" | Начинается с "TH" после decrypt ||  |
+| 8 | Позитивный | Ключ с повторами букв | key="AABBCC" | Матрица из 25 уникальных символов ||  |
+| 9 | Негативный | Пустая строка | text="", key="KEY" | ArgumentException ||  |
+| 10 | Негативный | Пустой ключ | key="" | ArgumentException ||  |
+| 11 | Негативный | null текст | text=null, key="KEY" | ArgumentNullException | |  |
+| 12 | Негативный | null ключ | key=null | ArgumentNullException ||  |
+| 13 | Негативный | Decrypt пустая строка | cipher="", key="KEY" | ArgumentException | |  |
+| 14 | Негативный | Decrypt null | cipher=null, key="KEY" | ArgumentNullException | |  |
+| 15 | Позитивный | Матрица не содержит J | Любой ключ | Все 25 символов ≠ 'J' | |  |
+ 
+---
