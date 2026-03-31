@@ -93,3 +93,9 @@ U  V  W  X  Z
 | **Exception Settings** | Настройка перехвата `ArgumentException` и `ArgumentNullException` для проверки валидации |
  
 ---
+## Результаты автоматизированного тестирования
+
+![Test Explorer](docs/test-explorer.png)
+
+Все 15 автоматизированных тестов пройдены успешно.
+ 
