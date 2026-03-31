@@ -18,4 +18,11 @@
             <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
         </PackageReference>
     </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Docs\test-explorer.png" />
+      <AvaloniaResource Include="Docs\test-explorer.png" />
+      <None Remove="Docs\use-case-diagram.png" />
+      <AvaloniaResource Include="Docs\use-case-diagram.png" />
+    </ItemGroup>
 </Project>

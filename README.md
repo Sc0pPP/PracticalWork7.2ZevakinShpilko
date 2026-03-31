@@ -44,7 +44,7 @@ U  V  W  X  Z
 ---
 ## Диаграмма вариантов использования
 
-![Use Case Diagram](docs/use-case-diagram.png)
+![Use Case Diagram](PlayfairCipherApp/Docs/use-case-diagram.png)
 
 **Варианты использования:**
 - Ввести ключ
@@ -94,7 +94,7 @@ U  V  W  X  Z
 ---
 ## Результаты автоматизированного тестирования
 
-![Test Explorer](docs/test-explorer.png)
+![Test Explorer](PlayfairCipherApp/Docs/test-explorer.png)
 
 Все 15 автоматизированных тестов пройдены успешно.
 ---
