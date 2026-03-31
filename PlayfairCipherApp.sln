@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayfairCipherApp", "PlayfairCipherApp\PlayfairCipherApp.csproj", "{4232285D-E2B7-4380-908B-3C759E12873D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayfairCipherApp.Tests", "PlayfairCipherApp.Tests\PlayfairCipherApp.Tests.csproj", "{1171DFDA-C1E6-4E55-8EA9-62F0683B15F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4232285D-E2B7-4380-908B-3C759E12873D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4232285D-E2B7-4380-908B-3C759E12873D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4232285D-E2B7-4380-908B-3C759E12873D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4232285D-E2B7-4380-908B-3C759E12873D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1171DFDA-C1E6-4E55-8EA9-62F0683B15F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1171DFDA-C1E6-4E55-8EA9-62F0683B15F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1171DFDA-C1E6-4E55-8EA9-62F0683B15F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1171DFDA-C1E6-4E55-8EA9-62F0683B15F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
