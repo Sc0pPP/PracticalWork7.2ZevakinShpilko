@@ -5,5 +5,117 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="PlayfairCipherApp.MainWindow"
         Title="PlayfairCipherApp">
-    Welcome to Avalonia!
+    <Grid Margin="15">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+
+    <!-- Ключ -->
+    <StackPanel Grid.Row="0" Margin="0,0,0,10">
+        <TextBlock Text="Ключ:" FontWeight="Bold" Margin="0,0,0,4"/>
+        <TextBox Name="KeyInput"
+                 MaxLength="25"
+                 FontSize="14"/>
+    </StackPanel>
+
+    <!-- Входной текст -->
+    <StackPanel Grid.Row="1" Margin="0,0,0,10">
+        <TextBlock Text="Исходный текст:" FontWeight="Bold" Margin="0,0,0,4"/>
+        <TextBox Name="InputText"
+                 Height="80"
+                 AcceptsReturn="True"
+                 TextWrapping="Wrap"
+                 ScrollViewer.VerticalScrollBarVisibility="Auto"
+                 FontSize="14"/>
+    </StackPanel>
+
+    <!-- Кнопки -->
+    <StackPanel Grid.Row="2"
+                Orientation="Horizontal"
+                HorizontalAlignment="Center"
+                Margin="0,0,0,10">
+
+        <Button Content="Зашифровать"
+                Width="150" Height="36" Margin="5"
+                Click="Encrypt_Click"
+                FontSize="13">
+            <ToolTip.Tip>
+                Зашифровать введённый текст шифром Плейфера
+            </ToolTip.Tip>
+        </Button>
+
+        <Button Content="Расшифровать"
+                Width="150" Height="36" Margin="5"
+                Click="Decrypt_Click"
+                FontSize="13">
+            <ToolTip.Tip>
+                Расшифровать введённый текст шифром Плейфера
+            </ToolTip.Tip>
+        </Button>
+
+        <Button Content="Показать матрицу"
+                Width="150" Height="36" Margin="5"
+                Click="ShowMatrix_Click"
+                FontSize="13">
+            <ToolTip.Tip>
+                Построить и отобразить матрицу 5×5 на основе введённого ключа
+            </ToolTip.Tip>
+        </Button>
+    </StackPanel>
+
+    <!-- Результат -->
+    <StackPanel Grid.Row="3" Margin="0,0,0,10">
+        <TextBlock Text="Результат:" FontWeight="Bold" Margin="0,0,0,4"/>
+        <TextBox Name="OutputText"
+                 Height="80"
+                 IsReadOnly="True"
+                 TextWrapping="Wrap"
+                 ScrollViewer.VerticalScrollBarVisibility="Auto"
+                 FontSize="14"
+                 Background="#F5F5F5">
+            <ToolTip.Tip>
+                Результат шифрования / дешифрования (только для чтения)
+            </ToolTip.Tip>
+        </TextBox>
+    </StackPanel>
+
+    <!-- Матрица 5×5 -->
+    <Border Grid.Row="4"
+            Margin="0,0,0,10"
+            Padding="10"
+            BorderBrush="Gray"
+            BorderThickness="1"
+            CornerRadius="5">
+
+        <StackPanel>
+            <!-- Заголовок -->
+            <TextBlock Text="Матрица 5×5"
+                       FontWeight="Bold"
+                       Margin="0,0,0,8"/>
+
+            <!-- Контент -->
+            <TextBlock Name="MatrixDisplay"
+                       FontFamily="Consolas"
+                       FontSize="18"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center">
+                <ToolTip.Tip>
+                    Матрица шифра Плейфера, построенная из ключа
+                </ToolTip.Tip>
+            </TextBlock>
+        </StackPanel>
+    </Border>
+
+    <!-- Статус -->
+    <TextBlock Grid.Row="5"
+               Name="StatusText"
+               Foreground="Gray"
+               FontSize="11"
+               Text="Готово. Введите ключ и текст для начала работы."/>
+</Grid>
 </Window>
